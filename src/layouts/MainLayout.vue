@@ -12,10 +12,21 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          FirstSwipe
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
+
+        <q-space />
+
+        <q-btn
+          flat
+          dense
+          round
+          icon="person"
+          aria-label="Account"
+          @click="signIn"
+        />
       </q-toolbar>
     </q-header>
 
@@ -98,5 +109,10 @@ const leftDrawerOpen = ref(false)
 
 function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value
+}
+
+function signIn () {
+  // Add your sign-in logic here
+  console.log('Sign-in button clicked')
 }
 </script>
